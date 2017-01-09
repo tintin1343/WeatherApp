@@ -1,0 +1,22 @@
+<h1>Forecast for {{city}}</h1>
+<hr/>
+<a href="#">Back to Search</a>
+
+<hr/>
+Days: <a href="#/forecast/2" ng-class="{'bg-primary' : days === '2'}">2</a> |
+<a href="#/forecast/5" ng-class="{'bg-primary' : days === '5'}">5</a> |
+<a href="#/forecast/10" ng-class="{'bg-primary' : days === '10'}">10</a> |
+<a href="#/forecast/15" ng-class="{'bg-primary' : days === '15'}">15</a>
+<hr/>
+<!--<h3>Key: 9cb603ceb7365c873a9e6efc6e22fad3</h3>-->
+
+<div ng-repeat="w in weatherResult.list">
+    <forecast-day weather-day="w"
+                  convert-to-standard="convertToFahrenheit(dayTimeTemp)"
+                  convert-to-date="convertToDate(dt)"
+                  date-format="MMMM d, y"
+    ></forecast-day>
+</div>
+
+
+
